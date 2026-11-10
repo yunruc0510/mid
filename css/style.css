@@ -1,0 +1,319 @@
+/* ==========================================
+   《半畝方糖》大二影展專題網頁 — 淺藍淺粉可愛風樣式表
+   ========================================== */
+
+:root {
+  /* 可愛配色系統 */
+  --primary-pink: #FF94B9;          /* 主配色：草莓棉花粉 */
+  --primary-blue: #8ECAE6;          /* 主配色：晴空粉藍 */
+  --pink-soft: #FFF0F5;             /* 柔粉底色 */
+  --blue-soft: #E0F2FE;             /* 雲朵藍底色 */
+  --bg-gradient: linear-gradient(135deg, #FFF3F8 0%, #EBF8FF 100%); /* 粉藍夢幻漸層 */
+  
+  --text-main: #4A4E69;             /* 深藍紫灰內文 (比純黑更溫柔) */
+  --text-pink: #E85D88;             /* 粉色強調標題 */
+  --text-blue: #2B7A9E;             /* 藍色強調標題 */
+  
+  --card-bg: rgba(255, 255, 255, 0.92);
+  --border-pink: #FFD6E8;           /* 可愛粉紅邊框 */
+  --border-blue: #BAE6FD;           /* 可愛粉藍邊框 */
+  
+  --radius-lg: 22px;                /* Q彈大圓角 */
+  --radius-md: 14px;                /* 中圓角 */
+  --radius-pill: 50px;              /* 膠囊圓角 */
+  
+  --shadow-pink: 0 10px 25px rgba(255, 148, 185, 0.2);
+  --shadow-blue: 0 10px 25px rgba(142, 202, 230, 0.25);
+  --sidebar-width: 270px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "MOPLUS Rounded 1c", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  background: var(--bg-gradient);
+  background-attachment: fixed;
+  color: var(--text-main);
+  line-height: 1.75;
+}
+
+/* 雙欄主架構 */
+.site-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* 左側邊導覽列 (Cute Sidebar) */
+.sidebar {
+  width: var(--sidebar-width);
+  background: linear-gradient(180deg, #FFB3C6 0%, #A2D2FF 100%);
+  color: #ffffff;
+  padding: 2.5rem 1.5rem;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 4px 0 20px rgba(255, 179, 198, 0.3);
+}
+
+.brand-box {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(8px);
+  padding: 1.2rem;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.brand-title {
+  font-size: 1.7rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(232, 93, 136, 0.3);
+}
+
+.brand-subtitle {
+  font-size: 0.85rem;
+  background: #ffffff;
+  color: var(--text-pink);
+  display: inline-block;
+  padding: 0.2rem 0.8rem;
+  border-radius: var(--radius-pill);
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.nav-menu {
+  list-style: none;
+  margin-top: 2rem;
+}
+
+.nav-item {
+  margin-bottom: 0.9rem;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.2rem;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: var(--radius-pill);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background: #ffffff;
+  color: var(--text-pink);
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-footer {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.85);
+  text-align: center;
+  border-top: 2px dashed rgba(255, 255, 255, 0.3);
+  padding-top: 1.2rem;
+}
+
+/* 右側主要內容區 */
+.main-content {
+  flex: 1;
+  padding: 2.5rem 3rem;
+  overflow-y: auto;
+}
+
+.header-banner {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  padding: 1.8rem 2.2rem;
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--border-pink);
+  box-shadow: var(--shadow-pink);
+  margin-bottom: 2rem;
+}
+
+.page-title {
+  font-size: 2.1rem;
+  color: var(--text-pink);
+  font-weight: 800;
+  margin-bottom: 0.4rem;
+}
+
+.page-tagline {
+  font-size: 1.05rem;
+  color: var(--text-blue);
+  font-weight: 600;
+}
+
+/* 標題與可愛裝飾 */
+.section-title {
+  font-size: 1.45rem;
+  color: var(--text-main);
+  margin: 2.2rem 0 1.2rem;
+  display: inline-block;
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+.section-title::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  color: var(--primary-pink);
+  font-size: 1.2rem;
+}
+
+/* CSS Grid 軟糖質感卡片系統 */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  padding: 1.6rem;
+  border: 2px solid var(--border-blue);
+  box-shadow: var(--shadow-blue);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.card:nth-child(even) {
+  border-color: var(--border-pink);
+  box-shadow: var(--shadow-pink);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  background: #ffffff;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  color: var(--text-blue);
+  margin-bottom: 0.6rem;
+  font-weight: 700;
+}
+
+.card:nth-child(even) .card-title {
+  color: var(--text-pink);
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: var(--text-main);
+}
+
+/* 16:9 可愛圓角自適應影片區塊 */
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(162, 210, 255, 0.4);
+  border: 4px solid #ffffff;
+  background-color: #000;
+  margin: 1.5rem 0;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* 可愛標籤與分鏡 Badge */
+.shot-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--primary-pink) 0%, #FFB3C6 100%);
+  color: #ffffff;
+  padding: 0.3rem 0.9rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.85rem;
+  font-weight: 800;
+  margin-bottom: 0.8rem;
+  box-shadow: 0 4px 10px rgba(255, 148, 185, 0.3);
+}
+
+.shot-meta {
+  margin-top: 1rem;
+  font-size: 0.88rem;
+  background: var(--blue-soft);
+  color: var(--text-blue);
+  padding: 0.7rem 0.9rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-blue);
+}
+
+/* 團隊頁面角色標籤 */
+.team-role {
+  display: inline-block;
+  background: var(--pink-soft);
+  color: var(--text-pink);
+  padding: 0.2rem 0.8rem;
+  border-radius: var(--radius-pill);
+  font-weight: 800;
+  font-size: 0.85rem;
+  margin-bottom: 0.6rem;
+  border: 1px solid var(--border-pink);
+}
+
+/* 響應式斷點 (Media Queries) */
+@media (max-width: 900px) {
+  .site-wrapper {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  }
+
+  .nav-menu {
+    display: flex;
+    gap: 0.6rem;
+  }
+
+  .nav-item {
+    margin-bottom: 0;
+    flex: 1;
+  }
+
+  .main-content {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-title {
+    font-size: 1.65rem;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
